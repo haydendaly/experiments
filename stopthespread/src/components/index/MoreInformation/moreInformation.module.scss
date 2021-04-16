@@ -1,0 +1,67 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  max-width: calc(600px - 10%);
+  margin: 50px auto;
+  width: 90%;
+}
+
+.linksContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkContainer {
+  border-radius: 10px;
+  box-shadow: 0 5px 7px 0 rgba(188, 115, 71, 0.22);
+  background-color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0 3px 7px 0 rgba(188, 115, 71, 0.22);
+  }
+}
+
+.icon {
+  max-width: 40px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5045fd;
+}
+
+.linkTitle {
+  font-family: "circe-rounded";
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  padding-left: 10px;
+}
+
+.comingSoon {
+  padding: 4px 6px 3px;
+  background: #5045fd;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 0 10px;
+  font-weight: bold;
+  opacity: 0.5;
+}

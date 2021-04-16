@@ -1,0 +1,54 @@
+@import "../../../../scss/constants.scss";
+
+.details {
+  padding-left: 18px;
+  list-style: none;
+}
+
+.detail {
+  font-family: "circe-rounded";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  margin: -15px 0;
+  line-height: 18px;
+  margin: 5px 0;
+
+  &:before {
+    content: "•";
+    font-size: 30px;
+    display: inline-block;
+    width: 12px;
+    margin-left: -12px;
+  }
+
+  b {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.byline {
+  opacity: 0.8;
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.warning {
+  .byline,
+  .detail {
+    color: white;
+  }
+}

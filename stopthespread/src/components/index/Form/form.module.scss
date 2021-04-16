@@ -1,0 +1,364 @@
+@import "../../../scss/constants.scss";
+
+.innerContainer {
+  max-width: 520px;
+  margin: auto;
+  height: 50%;
+  transition: 0.25s;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.activateContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.activateFormButton {
+  border-radius: 47.5px;
+  box-shadow: 0 5px 7px 0 rgba(188, 115, 71, 0.22);
+  background-color: #5045fd;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 20px 40px;
+  border: 0;
+  margin-top: 0px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6078ff;
+    box-shadow: 0 3px 7px 0 rgba(188, 115, 71, 0.22);
+  }
+}
+
+.container {
+  margin: 80px auto;
+  max-width: calc(600px - 10%);
+  width: 90%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5045fd;
+}
+
+.topicsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+
+.topicContainer {
+  width: 35%;
+  border-radius: 10px;
+  box-shadow: 0 5px 7px 0 rgba(188, 115, 71, 0.22);
+  background-color: #ffffff;
+  padding: 10px 12px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  align-items: center;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  display: flex;
+  transition: 0.1s background-color;
+
+  &:hover {
+    box-shadow: 0 3px 7px 0 rgba(188, 115, 71, 0.22);
+  }
+
+  &.enabledTopicContainer {
+    background-color: #eeeeee;
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 100%;
+    margin-right: 10px;
+  }
+}
+
+.submissionContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.phoneNumberContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.messageTypeContainer {
+  margin-bottom: 30px;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.privacyContainer {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.back {
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.backIcon {
+  padding-bottom: 3px;
+  padding-right: 6px;
+}
+
+.countrySelect {
+  width: 120px;
+  border-radius: 23px;
+  box-shadow: 0 5px 7px 0 rgba(71, 97, 188, 0.22);
+  border: solid 2px #ffffff;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  background-image: url("./dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 12px;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 5px 20px;
+  appearance: none;
+  margin-top: 8px;
+  margin-bottom: 15px;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  option {
+    background: $primary-blue;
+    color: $primary-color;
+  }
+}
+
+.contactNumber {
+  max-width: 200px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  background-image: url("./phoneIcon.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 14px;
+  padding: 11px 11px 11px 38px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  border: 3px solid #6078ff;
+  outline: none;
+}
+
+.messageTypeInput {
+  opacity: 0;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.byline {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.shareDisclaimer {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.countryLabel {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.messageTypeChoiceLabel {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.messageTypeLabel {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0 10px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    box-shadow: 0 5px 7px 0 rgba(71, 97, 188, 0.22);
+    border: solid 2px #ffffff;
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.icon {
+  max-width: 25px;
+  padding-right: 10px;
+}
+
+.checked {
+  &::before {
+    content: "";
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    box-shadow: 0 5px 7px 0 rgba(71, 97, 188, 0.22);
+    border: solid 2px #ffffff;
+    background-color: #ffffff;
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.submit {
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 9px 64px;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: #5045fd;
+  outline: none;
+  cursor: pointer;
+}
+
+.privacyLabel {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  margin: auto;
+
+  a {
+    color: #ffbf58;
+  }
+}
+
+.privacyAccepted {
+  margin-right: 5px;
+}
+
+.submitting {
+  color: #ffbf58;
+}
+
+.success {
+  color: #24a890;
+}
+
+.failure {
+  color: rgb(189, 13, 13);
+}

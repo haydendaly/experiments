@@ -1,0 +1,99 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  position: absolute;
+  top: 21px;
+  right: 14px;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.sharingIcons {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  position: relative;
+}
+
+.iconContainer {
+  margin-top: 10px;
+  position: relative;
+}
+
+.icon {
+  border-radius: 30px;
+  box-shadow: 0 2px 4px 0 rgba(48, 89, 160, 0.5);
+  background-color: #3b5998;
+  position: relative;
+}
+
+.linkCopiedNotification {
+  width: 207px;
+  border-radius: 4px;
+  background-color: #5045fd;
+  position: absolute;
+  left: -217px;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  height: 0;
+}
+
+.linkCopiedText {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.copySuccessActive {
+  height: 96px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuButton {
+  width: 46px;
+  height: 46px;
+  border-radius: 27.5px;
+  box-shadow: 0 2px 4px 0 rgba(48, 89, 160, 0.5);
+  background-color: $primary-color;
+  font-size: 11px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyText {
+  position: fixed;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  top: -1px;
+  right: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+}

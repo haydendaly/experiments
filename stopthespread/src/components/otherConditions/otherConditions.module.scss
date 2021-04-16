@@ -1,0 +1,34 @@
+@import "../../scss/constants.scss";
+
+.container {
+  max-width: calc(600px - 10%);
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin-bottom: 0;
+}
+
+.byline {
+  opacity: 0.8;
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin: 0;
+  margin-bottom: 50px;
+}

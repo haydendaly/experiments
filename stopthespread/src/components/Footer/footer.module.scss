@@ -1,0 +1,81 @@
+@import "../../scss/constants.scss";
+
+.container {
+  background-color: $primary-blue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 29px;
+  padding-bottom: 50px;
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    height: 18px;
+    border-radius: 18px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: $primary-blue;
+  }
+}
+
+.socialsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.social {
+  path {
+    fill: #ffffff;
+  }
+
+  &:hover {
+    path {
+      fill: $primary-color;
+    }
+  }
+}
+
+.website {
+  font-family: "circe-rounded";
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.link {
+  font-family: "circe-rounded";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.lastUpdated {
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}

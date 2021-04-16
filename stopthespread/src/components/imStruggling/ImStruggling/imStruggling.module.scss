@@ -1,0 +1,100 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  max-width: calc(600px - 10%);
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin-bottom: 0;
+}
+
+.byline {
+  opacity: 0.8;
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5045fd;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.details {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.detail {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  line-height: 18px;
+  margin: 7px 0;
+
+  &:before {
+    content: "•";
+    font-size: 30px;
+    color: #f9a319;
+    display: inline-block;
+    width: 12px;
+    margin-left: -12px;
+    font-weight: normal;
+  }
+
+  a {
+    color: #3a95ff;
+  }
+}
+
+.warning {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $warning-color;
+}
+
+.subDetails {
+  list-style: none;
+}
+
+.subDetail {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  line-height: 16px;
+  margin: 4px 0;
+
+  &:before {
+    content: "-";
+    font-size: 18px;
+    display: inline-block;
+    width: 12px;
+    margin-left: -12px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  max-width: calc(600px - 10%);
+  margin: 60px auto;
+  width: 90%;
+}
+
+.linkContainer {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 5px 7px 0 rgba(188, 115, 71, 0.22);
+  background-color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: auto;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 3px 7px 0 rgba(188, 115, 71, 0.22);
+  }
+}
+
+.linkIcon {
+  width: 24px;
+}
+
+.linkTitle {
+  font-family: "circe-rounded";
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  padding-left: 10px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin-bottom: 0;
+}
+
+.bottomText {
+  opacity: 0.8;
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin: auto;
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+
+.byline {
+  opacity: 0.8;
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin: 0;
+  margin-bottom: 50px;
+}

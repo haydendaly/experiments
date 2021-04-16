@@ -1,0 +1,199 @@
+@import "../../scss/constants.scss";
+
+.container {
+  max-width: 600px;
+  background-color: $primary-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 7px;
+  position: relative;
+  margin: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $primary-blue;
+    border-radius: 18px;
+    bottom: -9px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    height: 18px;
+  }
+}
+
+.titleContainer {
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto 0 auto;
+}
+
+.countriesContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 232px;
+  margin: auto;
+  position: relative;
+  margin-top: 10px;
+}
+
+.countriesActiveContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.countryContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  path {
+    opacity: 0.5;
+  }
+}
+
+.activeCountryContainer {
+  & path {
+    opacity: 1;
+  }
+}
+
+.informationContainer {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+}
+
+.unavailableTooltip {
+  display: none;
+  position: absolute;
+  bottom: -105px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 306px;
+  height: 83px;
+  border-radius: 5px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
+  background-color: $primary-blue;
+  z-index: 10;
+  padding: 28px 28px 0 28px;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid $primary-blue;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    left: calc(50% - 4px);
+    top: -15px;
+  }
+}
+
+.activeTooltip {
+  display: block;
+}
+
+.title {
+  font-family: "circe-rounded";
+  font-size: 29px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.byline {
+  font-family: "circe-rounded";
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.label {
+  font-family: "circe-rounded";
+  font-size: 13px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
+.active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.tooltipText {
+  font-family: "circe-rounded";
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.information {
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.informationFromWhere {
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 7px;
+  margin-top: 3px;
+}
+
+@media (max-width: 475px) {
+  .information {
+    display: inline;
+  }
+}

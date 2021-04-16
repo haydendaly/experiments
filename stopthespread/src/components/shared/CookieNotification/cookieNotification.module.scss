@@ -1,0 +1,67 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: $primary-blue;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.contentContainer {
+  display: inline-block;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.accept {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 27.5px;
+  border: solid 1px #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (max-width: 451px) {
+  .contentContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .accept {
+    display: inline-block;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 365px) {
+  .text {
+    font-size: 11px;
+  }
+}

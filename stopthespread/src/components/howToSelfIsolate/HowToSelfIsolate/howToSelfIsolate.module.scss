@@ -1,0 +1,217 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  max-width: calc(600px - 10%);
+  margin: 60px auto;
+  width: 90%;
+}
+
+.plainDetailsContainer {
+  margin: 20px auto;
+  width: 90%;
+
+  .plainDetail {
+    &:before {
+      content: "•";
+      font-size: 30px;
+      display: inline-block;
+      width: 12px;
+      margin-left: -12px;
+    }
+  }
+}
+
+.details {
+  padding-left: 18px;
+  list-style: none;
+}
+
+.detailText,
+.plainDetail {
+  font-family: "circe-rounded";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  opacity: 0.8;
+  line-height: 16px;
+  padding: 5px 0;
+  display: block;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+.subDetails {
+  list-style: none;
+}
+
+.icon {
+  max-width: 20px;
+}
+
+.warning {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ab9a8f;
+  margin-top: 40px;
+  .b {
+    font-weight: bold;
+  }
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+  margin: 0;
+}
+
+.byline {
+  opacity: 0.8;
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5045fd;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.contactNHS {
+  max-width: 319px;
+  margin: auto;
+
+  .plainDetail {
+    opacity: 1;
+  }
+}
+
+.contactDetails {
+  list-style: none;
+  padding-left: 18px;
+}
+
+.contactHeading {
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+}
+
+.contactDetail {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  line-height: 18px;
+  margin: 4px 0;
+
+  &:before {
+    content: "•";
+    font-size: 30px;
+    color: $primary-blue;
+    display: inline-block;
+    width: 12px;
+    margin-left: -12px;
+    font-weight: normal;
+  }
+}
+
+.isolationInformation {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3b3b4d;
+}
+
+.linkContainer {
+  border-radius: 10px;
+  box-shadow: 0 5px 7px 0 rgba(188, 115, 71, 0.22);
+  background-color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 3px 7px 0 rgba(188, 115, 71, 0.22);
+  }
+}
+
+.detail,
+.subDetail {
+  position: relative;
+}
+
+.detail {
+  margin-top: 10px;
+}
+
+.icon {
+  width: 18px;
+  position: absolute;
+  top: 3px;
+  left: -22px;
+}
+
+.linkIcon {
+  width: 24px;
+}
+
+.linkTitle {
+  font-family: "circe-rounded";
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+  padding-left: 10px;
+}
+
+.finalText {
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5045fd;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.redHighlight {
+  color: $warning-color;
+}

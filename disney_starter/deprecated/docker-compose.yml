@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  wp:
+    container_name: wp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 80:80
+    environment:
+      - CHOKIDAR_USEPOLLING=true

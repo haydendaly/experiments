@@ -1,0 +1,31 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  max-width: calc(600px - 10%);
+  margin-top: 70px;
+  margin: auto;
+  width: 90%;
+  padding-top: 13px;
+}
+
+.tilesContainer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tileContainer {
+  width: 48%;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $primary-blue;
+  padding-bottom: 10px;
+}

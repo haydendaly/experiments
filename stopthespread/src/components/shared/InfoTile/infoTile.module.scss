@@ -1,0 +1,73 @@
+@import "../../../scss/constants.scss";
+
+.container {
+  position: relative;
+  background-color: white;
+  padding: 40px 20px 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  box-shadow: 0 5px 7px 0 rgba(188, 115, 71, 0.22);
+}
+
+.iconContainer {
+  height: 66px;
+  width: 66px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  max-width: 40px;
+}
+
+.coloredBar {
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin: 0;
+}
+
+.bottomText {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3b3b4d;
+}
+
+.warning {
+  background-color: $warning-color;
+
+  .iconContainer {
+    background-color: $warning-color;
+  }
+
+  .bottomText {
+    color: white;
+  }
+}
