@@ -596,3 +596,73 @@ Can use this to process log files:
 ```sh
 node --prof-process isolate-0xnnnnnnnnnnnn-v8.log > processed.txt
 ```
+
+## Blocking vs. Non-Blocking I/O
+
+Blocking: when JS process must wait for non-JS operation. Execute synchronously and non-blocking execute asynchronously.
+
+Synchronous: 
+
+```js
+const fs = require('fs');
+const data = fs.readFileSync('/file.md');
+console.log(data);
+moreWork();
+```
+
+Asynchronous:
+
+```js
+const fs = require('fs');
+fs.readFile('/file.md', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+moreWork();
+```
+
+If things need to be called in order, nest them to ensure synchronity.
+
+```js
+const fs = require('fs');
+fs.readFile('/file.md', (readFileErr, data) => {
+  if (readFileErr) throw readFileErr;
+  console.log(data);
+  fs.unlink('/file.md', (unlinkErr) => {
+    if (unlinkErr) throw unlinkErr;
+  });
+});
+```
+
+## Event Loop
+
+JS is single-threaded but event loop allows for non-blocking I/O operations.
+
+```
+   ┌───────────────────────────┐
+┌─>│           timers          │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │     pending callbacks     │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │       idle, prepare       │
+│  └─────────────┬─────────────┘      ┌───────────────┐
+│  ┌─────────────┴─────────────┐      │   incoming:   │
+│  │           poll            │<─────┤  connections, │
+│  └─────────────┬─────────────┘      │   data, etc.  │
+│  ┌─────────────┴─────────────┐      └───────────────┘
+│  │           check           │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+└──┤      close callbacks      │
+   └───────────────────────────┘
+```
+
+Phases:
+* timers: Callbacks scheduled by `setTimeout()` and `setInterval()`
+* pending callbacks: executes I/O callbacks deferred to the next loop iteration
+* idle, prepare: only used internally
+* poll: retrieve new I/O events and execute I/O related callbacks
+* check: `setImmediate()` callbacks are invoked here
+* close callbacks: e.g. `socket.on('close', ...)`
