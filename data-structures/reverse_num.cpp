@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 int reverse(int x) {
     long sum = 0;
     while (x != 0) {

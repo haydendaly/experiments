@@ -2,6 +2,8 @@
 #include <vector>
 #include<unordered_set>
 
+using namespace std;
+
 vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
     unordered_set<int> hashset;
     for (int i : nums1) hashset.insert(i);

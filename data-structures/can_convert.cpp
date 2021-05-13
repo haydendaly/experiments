@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 bool canConvert(string str1, string str2) {
     if (str1 == str2) return true;
     if (str1.size() != str2.size()) return false;
