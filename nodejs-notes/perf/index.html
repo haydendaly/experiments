@@ -1,0 +1,15 @@
+<button>Kill Main Thread</button>
+
+<script>
+    function blockEventLoop(i) {
+        console.log(i)
+        blockEventLoop(i + 1)
+    }
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', () => blockEventLoop(0), false)
+</script>
+
+<p>Some text. More text</p>
+
+<button>Just a button</button>
+<input type="text" />

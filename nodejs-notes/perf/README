@@ -1,0 +1,7 @@
+# Playing with Apache Benchmark
+
+```sh
+$ node main.js
+$ ab -n 100 -c 10 "http://localhost:1337/"
+$ ab -n 1000 -c 100 "http://localhost:1337/" | grep "Requests"
+```
