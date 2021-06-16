@@ -1,0 +1,23 @@
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <form onSubmit={() => console.log('submit')}>
+          <input type="radio" id="yes" name="choose" value="yes" />
+          <label for="yes">Yes</label>
+          <br />
+          <input type="radio" id="no" name="choose" value="no" />
+          <label for="no">No</label>
+          <br />
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+          <label for="vehicle1"> I have a bike</label>
+          <br />
+          <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+}
+
+export default App;
