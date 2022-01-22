@@ -1,0 +1,29 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc .",
+    "start": "chalet start && chalet add http://127.0.0.1:3000 -n nft -f && open http://nft.test && nodemon .",
+    "format": "prettier --write '**/*.{ts,tsx}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "The Mafia",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.4",
+    "@types/koa-json": "^2.0.20",
+    "@types/koa-logger": "^3.1.2",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^16.11.9"
+  }
+}
