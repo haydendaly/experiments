@@ -2,14 +2,12 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 
 /**
  * Base
  */
 // Debug
-// const gui = new dat.GUI()
+const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -18,58 +16,59 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 /**
- * Textures
+ * Lights
  */
-const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('/textures/matcaps/1.png')
-const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+scene.add(ambientLight)
 
-/**
- * Fonts
- */
-const fontLoader = new FontLoader()
+// const pointLight = new THREE.PointLight(0xffffff, 0.5, 10, 2)
+// pointLight.position.x = 2
+// pointLight.position.y = 3
+// pointLight.position.z = 4
+// scene.add(pointLight)
 
-fontLoader.load(
-    '/fonts/helvetiker_regular.typeface.json',
-    (font) => {
-        const textGeometry = new TextGeometry(
-            'vapr.finance',
-            {
-                font: font,
-                size: 0.5,
-                height: 0.2,
-                curveSegments: 12,
-                bevelEnabled: true,
-                bevelThickness: 0.04,
-                bevelSize: 0.02,
-                bevelOffset: 0,
-                bevelSegments: 5
-            }
-        )
+// const dirLight = new THREE.DirectionalLight(0x00ff00)
+// scene.add(dirLight)
 
-        textGeometry.center()
+// const hemLight = new THREE.HemisphereLight(0xff0000, 0x0000ff)
+// scene.add(hemLight)
 
-        const text = new THREE.Mesh(textGeometry, material)
-        scene.add(text)
-    }
-)
+const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1)
+scene.add(rectAreaLight)
 
 /**
  * Objects
  */
-const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
+// Material
+const material = new THREE.MeshStandardMaterial()
+material.roughness = 0.4
 
-for (let i = 0; i < 100; i++) {
-    const donut = new THREE.Mesh(donutGeometry, material)
-    const scale = Math.random() * .5
-    donut.scale.set(scale, scale, scale)
-    donut.position.x = (Math.random() - 0.5) * 10
-    donut.position.y = (Math.random() - 0.5) * 10
-    donut.position.z = (Math.random() - 0.5) * 10
-    donut.rotation.x = Math.random() * Math.PI
-    donut.rotation.y = Math.random() * Math.PI
-    scene.add(donut)
-}
+// Objects
+const sphere = new THREE.Mesh(
+    new THREE.SphereGeometry(0.5, 32, 32),
+    material
+)
+sphere.position.x = - 1.5
+
+const cube = new THREE.Mesh(
+    new THREE.BoxGeometry(0.75, 0.75, 0.75),
+    material
+)
+
+const torus = new THREE.Mesh(
+    new THREE.TorusGeometry(0.3, 0.2, 32, 64),
+    material
+)
+torus.position.x = 1.5
+
+const plane = new THREE.Mesh(
+    new THREE.PlaneGeometry(5, 5),
+    material
+)
+plane.rotation.x = - Math.PI * 0.5
+plane.position.y = - 0.65
+
+scene.add(sphere, cube, torus, plane)
 
 /**
  * Sizes
@@ -123,6 +122,15 @@ const clock = new THREE.Clock()
 
 const tick = () => {
     const elapsedTime = clock.getElapsedTime()
+
+    // Update objects
+    sphere.rotation.y = 0.1 * elapsedTime
+    cube.rotation.y = 0.1 * elapsedTime
+    torus.rotation.y = 0.1 * elapsedTime
+
+    sphere.rotation.x = 0.15 * elapsedTime
+    cube.rotation.x = 0.15 * elapsedTime
+    torus.rotation.x = 0.15 * elapsedTime
 
     // Update controls
     controls.update()
